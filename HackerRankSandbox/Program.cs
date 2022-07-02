@@ -1,31 +1,9 @@
-﻿using System.Linq;
+﻿using HackerRankSandbox.Challenges;
 
-List<int> q = new List<int>() { 1, 2, 5, 3, 7, 8, 6, 4 };
+int[] arr = { 4, 3, 1, 2 };
 
+int[] num = { 1, 3, 5, 2, 4, 6, 7 };
 
-var s = 0;
-var j = 1;
-var count = q.Count;
-var r = q.OrderBy(x => x).ToList();
+Console.WriteLine($"Mine solution: {MinimumSwaps2.minimumSwaps(arr)}\n");
 
-for (var i = 0; i < count; i++)
-{
-    if (q[i] - (i + 1) > 2)
-    {
-        Console.WriteLine("Too chaotic");
-        break;
-    }
-
-    if (j < count && q[i] > q[j])
-    {
-        var p = r.FindIndex(x => x == q[i]);
-
-
-    }
-
-    j++;
-
-}
-
-if (s > 0)
-    Console.WriteLine(s);
+Console.WriteLine($"Correct solution: {MinimumSwaps2.minimumSwapsSolution(arr)}\n");
